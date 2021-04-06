@@ -7,10 +7,19 @@
   padding: 14px;
 
   &__image {
-    display: block;
-    height: 134px;
+    align-self: center;
     width: 160px;
-    margin: 15px 5px 45px;
+    height: 134px;
+    margin: 15px 0 45px;
+    transition: transform $transition-time;
+
+    &:hover {
+      margin: 0 0 30px;
+      padding: 12px 0;
+      transform: scale($image-scale);
+      border: 3px solid #f3f3f3;
+      box-sizing: initial;
+    }
   }
 
   &__description {
@@ -46,10 +55,11 @@
     color: #{$background-color};
     height: 40px;
     text-decoration: none;
+    border: 1px solid #{$page-style-color};
+    transition: color, background-color $transition-time;
   }
 
   &__button:hover {
-    border: 1px solid #{$page-style-color};
     color: #{$page-style-color};
     background-color: #{$background-color};
   }
